@@ -4,6 +4,7 @@ import Footer from "./Component/Footer";
 import Center from "./Component/Center";
 import Carousel from "./Component/Carousel";
 import ProductCarousel from "./Component/ProductCarousel";
+import OfferCards from "./Component/OfferCards";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Cart state
@@ -17,7 +18,8 @@ function App() {
       <Header cartItems={cartItems} />
       <Carousel />
       <Center />
-      <ProductCarousel addToCart={addToCart} />
+      <OfferCards/>
+      <ProductCarousel/>
       <Footer />
     </>
   );
