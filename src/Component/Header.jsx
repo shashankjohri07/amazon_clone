@@ -6,7 +6,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ cartItems, toggleCart }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const Header = () => {
       {/* Location */}
       <div className="hidden sm:flex items-center text-white mx-6">
         <div className="flex items-center space-x-1">
-          <span className="text-xs">Deliver to Meerut 250001</span>
+          <span className="text-xs">Deliver to Moradabad 244001</span>
           <FaMapMarkerAlt />
           <span className="font-bold text-sm">Update Location</span>
         </div>
@@ -46,7 +46,7 @@ const Header = () => {
       <div className="text-white flex items-center text-xs space-x-6 mx-6">
         {/* Language */}
         <div className="link flex items-center space-x-1">
-          <p>🏳‍🌈 En</p>
+          <p>🏳‍🌈 IND</p>
           <FaCaretDown />
         </div>
         {/* User */}
@@ -99,9 +99,12 @@ const Header = () => {
           <p className="font-bold md:text-sm">& Orders</p>
         </div>
         {/* Cart */}
-        <div className="relative link flex items-center">
+        <div
+          className="relative link flex items-center"
+          onClick={toggleCart} // Trigger cart toggle
+        >
           <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
-            0
+            {cartItems.length}
           </span>
           <FaShoppingCart className="h-10" />
           <p className="hidden md:inline font-bold md:text-sm mt-2">Cart</p>

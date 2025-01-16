@@ -20,10 +20,10 @@ const OfferCards = () => {
     {
       title: 'Up to 60% off | Daily needs',
       items: [
-        { text: 'Household & personal care', image: 'household_image_url' },
-        { text: 'Food & beverages', image: 'food_image_url' },
-        { text: 'Baby care', image: 'babycare_image_url' },
-        { text: 'Pet care', image: 'petcare_image_url' },
+        { text: 'Household & personal care', image: 'https://tinyurl.com/bdean5am' },
+        { text: 'Food & beverages', image: 'https://tinyurl.com/5n7z9a43' },
+        { text: 'Baby care', image: 'https://tinyurl.com/mt6fvdcf' },
+        { text: 'Pet care', image: 'https://tinyurl.com/3dvxazkt' },
       ],
     },
     {
