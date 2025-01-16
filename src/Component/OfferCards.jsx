@@ -14,7 +14,7 @@ const OfferCards = () => {
     {
       title: 'Up to 75% off | Electronics & accessories',
       items: [
-        { text: '', image: 'electronics_image_url' },
+        { text: '', image: 'https://tinyurl.com/5n8tz9up' },
       ],
     },
     {
