@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       {/* Pass cartItems to Header */}
-      <Header cartItems={cartItems} />
+      <Header/>
       <Carousel />
       <Center />
       <OfferCards />
