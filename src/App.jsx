@@ -5,7 +5,6 @@ import Center from "./Component/Center";
 import Carousel from "./Component/Carousel";
 import ProductCarousel from "./Component/ProductCarousel";
 import OfferCards from "./Component/OfferCards";
-import Cart from "./Component/Cart";
 import Navbar from "./Component/Navbar";
 
 function App() {
@@ -27,8 +26,7 @@ function App() {
       <ProductCarousel />
       <Footer />
 
-      {/* Render Cart normally */}
-      <Cart cartItems={cartItems} />
+      
     </>
   );
 }
