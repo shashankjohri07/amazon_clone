@@ -6,6 +6,7 @@ import Carousel from "./Component/Carousel";
 import ProductCarousel from "./Component/ProductCarousel";
 import OfferCards from "./Component/OfferCards";
 import Cart from "./Component/Cart";
+import Navbar from "./Component/Navbar";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Cart state
@@ -19,7 +20,8 @@ function App() {
     <>
       {/* Pass cartItems to Header */}
       <Header/>
-      <Carousel />
+      <Navbar/>
+      <Carousel/>
       <Center />
       <OfferCards />
       <ProductCarousel />
