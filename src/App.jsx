@@ -17,7 +17,6 @@ function App() {
 
   return (
     <>
-      {/* Pass cartItems to Header */}
       <Header/>
       <Navbar/>
       <Carousel/>
@@ -26,7 +25,6 @@ function App() {
       <ProductCarousel />
       <Footer />
 
-      
     </>
   );
 }
