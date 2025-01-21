@@ -1,11 +1,11 @@
-// src/components/LoginPage.jsx
+// src/components/Login.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setCurrentUser } from "utility/authSlice";
+import { setUser } from "./redux/slices/authSlice";
 import axios from "axios";
 
-const LoginPage = () => {
+const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -15,16 +15,16 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     axios
       .post("http://localhost:6061/login", { username, password })
       .then((response) => {
         const { token, refresh_token } = response?.data;
-        dispatch(setCurrentUser({username }));
-        localStorage.setItem('token', token)
-        localStorage.setItem('refresh_token', refresh_token)
+        dispatch(setUser({ username }));
+        localStorage.setItem("token", token);
+        localStorage.setItem("refresh_token", refresh_token);
 
-        navigate("/profile");
+        navigate("/");
         console.log(response);
       })
       .catch((err) => {
@@ -115,4 +115,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

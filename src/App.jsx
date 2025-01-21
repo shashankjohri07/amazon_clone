@@ -6,6 +6,9 @@ import Carousel from "./Component/Carousel";
 import ProductCarousel from "./Component/ProductCarousel";
 import OfferCards from "./Component/OfferCards";
 import Navbar from "./Component/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./Component/Login";
+import Signup from "./Component/Signup";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Cart state
@@ -17,16 +20,29 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Navbar/>
-      <Carousel/>
-      <Center />
-      <OfferCards />
-      <ProductCarousel />
-      <Footer />
-
+      <Router>
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<WrapUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }
+
+const WrapUp = () => {
+  return (
+    <>
+      <Carousel />
+      <Center />
+      <OfferCards />
+      <ProductCarousel />
+    </>
+  );
+};
 
 export default App;

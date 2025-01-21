@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const Form = () => {
+const Signup = () => {
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
@@ -30,7 +30,7 @@ const Form = () => {
         <h2 className="text-2xl font-semibold text-center mb-6">
           Create account
         </h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           {/* Full Name */}
           <div className="mb-4">
             <label
@@ -105,4 +105,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Signup;
