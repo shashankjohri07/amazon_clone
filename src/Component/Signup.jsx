@@ -15,7 +15,7 @@ const Signup = () => {
     setError("");
     console.log(username, password);
     axios
-      .post("http://localhost:6061/register", { username, password })
+      .post("https://amazon-backend-4yvq.onrender.com/register", { username, password })
       .then((response) => {
         console.log(response);
 

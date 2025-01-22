@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     setError("");
     axios
-      .post("http://localhost:6061/login", { username, password })
+      .post("https://amazon-backend-4yvq.onrender.com/login", { username, password })
       .then((response) => {
         const { token, refresh_token } = response?.data;
         dispatch(setUser({ username }));
